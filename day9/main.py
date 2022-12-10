@@ -6,7 +6,7 @@ data = open('input.txt').read().split("\n")
 moves = {'R': (1, 0), 'U': (0, 1), 'L': (-1, 0), 'D': (0, -1)}
 knot_amount = 2  # for part2 2 -> 10
 rope = [(0, 0)] * knot_amount
-visited = {(0, 0)}
+visited = set()
 
 for line in data:
     direction, steps = line.split()
